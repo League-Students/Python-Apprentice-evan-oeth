@@ -1,26 +1,30 @@
-"""
-# 30_Turtle_Tricks.py
+import turtle
 
-In this assignment, you will use Tina the Turtle to draw multiple shapes on the screen.
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("white")
 
-- Draw two circles, each filled with a different color.
-- Position the circles in different locations on the screen (they should not overlap).
-- Use the turtle commands: begin_fill(), end_fill(), fillcolor(), circle(), and goto() to complete the task.
-- Try different colors and positions.
+t = turtle.Turtle()
+t.speed(3) # Sets drawing speed
 
-Refer to the previous program, Meet_Tina.py for examples of how to use these turtle commands.
-"""
+# --- Draw the First Circle ---
+t.penup()
+t.goto(-150, 50) # Moves the turtle without drawing
+t.pendown()
+t.fillcolor("cyan") # Sets the fill color for the first circle
+t.begin_fill()
+t.circle(50) # Draws a circle with a radius of 50
+t.end_fill()
 
-# These lines are needed in most turtle programs
-import turtle                           # Tell Python we want to work with the turtle
-turtle.setup(600, 600, 0, 0)            # Set the size of the window
-tina = turtle.Turtle()                  # Create a turtle named tina
+# --- Draw the Second Circle ---
+t.penup()
+t.goto(150, -50) # Moves to a different location (no overlap)
+t.pendown()
+t.fillcolor("orchid") # Sets a different fill color for the second circle
+t.begin_fill()
+t.circle(70) # Draws a larger circle with a radius of 70
+t.end_fill()
 
-# Use tina.circle() to draw a circle, and tina.goto() to move tina to a new location
-# Use tina.begin_fill(), tina.end_fill(), and tina.fillcolor() to fill in the shapes
-
-... # Your code here
-
-turtle.exitonclick()                    # Close the window when we click on it
-
-# Save your progress by checking in your code.
+# Hide the turtle and display the window
+t.hideturtle()
+turtle.done()
