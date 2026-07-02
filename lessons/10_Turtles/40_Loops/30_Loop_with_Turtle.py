@@ -1,16 +1,20 @@
-"""
-# 30_Loop_with_Turtle.py
+import turtle
 
-In this program, use a loop to draw a regular pentagon (5-sided shape) with Tina the Turtle.
+# Set up the screen
+screen = turtle.Screen()
+screen.bgcolor("lightblue") # Optional: sets background color
 
-- Review your previous program, 20_Loop_with_Turtle.py, which uses a loop to draw a shape with the turtle module.
-- Make sure your code is clear and well-commented.
-- Run your program to verify that Tina the Turtle draws a pentagon.
+# Create and name our turtle "Tina"
+tina = turtle.Turtle()
+tina.shape("turtle")
+tina.color("green")
+tina.pensize(3)
 
-(Hint: You can copy and modify your previous code!)
+# A regular pentagon has 5 sides and 72-degree exterior angles (360 / 5 = 72)
+# We use a loop to repeat the movement and rotation 5 times
+for i in range(5):
+    tina.forward(100)  # Move forward 100 pixels
+    tina.right(72)     # Turn right by 72 degrees
 
-uid: BpGnQq64
-name: Loop With Turtle
-"""
-
-... # Your code here
+# Keep the drawing window open until the user clicks it
+turtle.exitonclick()
