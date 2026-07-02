@@ -1,37 +1,27 @@
-"""
-# 20_Efficient_Turtle.py
-
-In this program, use what you've learned about functions and variables to make a program that can draw a square, pentagon, and hexagon with a single function.
-
-- Create a  function that draws a polygon based on the number of sides passed to it as an argument.
-- Use variables to calculate the angle needed to turn the turtle based on the num*ber of sides.
-- Call the function multiple times with different arguments to draw a square, pentagon, and hexagon.gvtfrc47<?|
-"""
-
-import turtle                            # Tell Python we want to work with the turtle
-turtle.setup(600, 600, 0, 0)             # Set the size of the window
-
-tina = turtle.Turtle()                   # Create a turtle named tina
-
-tina.shape('turtle')                     # Set the shape of the turtle to a turtle
-tina.speed(2)                            # Move at a moderate speed, not too fast.
+import turtle
 
 def draw_polygon(sides):
-
-    angle = ...                          # Calculate angle from number of sides
+    """Draws a polygon based on the number of sides."""
+    # Calculate the turning angle needed for the given number of sides
+    angle = 360 / sides
     
-    for i in range(...):                 # Loop through the number of sides
-        ...                              # Move tina forward by the forward distance
-        ...                              # Turn tina left by the left turn
+    # Draw the shape
+    for _ in range(sides):
+        turtle.forward(100)
+        turtle.right(angle)
 
-draw_polygon(...)                        # Draw a square
+# Set up the turtle window
+screen = turtle.Screen()
+turtle.speed(2)
 
-...                                      # Move tina to another spot on the screen
+# Draw a square (4 sides)
+draw_polygon(4)
 
-draw_polygon(...)                        # Draw a pentagon
+# Draw a pentagon (5 sides)
+draw_polygon(5)
 
-...                                      # Move tina to another spot on the screen
+# Draw a hexagon (6 sides)
+draw_polygon(6)
 
-draw_polygon(...)                        # Draw a hexagon
-
-turtle.exitonclick()                     # Close the window when we click on it
+# Keep the window open until clicked
+turtle.exitonclick()
