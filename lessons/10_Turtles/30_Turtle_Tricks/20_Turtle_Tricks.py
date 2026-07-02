@@ -1,23 +1,21 @@
-"""
-# 20_Turtle_Tricks.py
+import turtle
 
-In this assignment, you will use Tina the Turtle to draw a pentagon. 
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("white")
 
-- Each side of the pentagon should be a different color. 
-- Use the turtle commands: tina.forward(), tina.left(), and tina.pencolor() to accomplish this.
+tina = turtle.Turtle()
+tina.speed(2)
+tina.pensize(3)
 
-Refer to the previous program, Meet_Tina.py, for examples of how to use turtle commands.
-"""
+# List of colors for each side of the pentagon
+colors = ["red", "blue", "green", "purple", "orange"]
 
-# These lines are needed in most turtle programs
-import turtle                           # Tell Python we want to work with the turtle
-turtle.setup(600, 600, 0, 0)            # Set the size of the window
-tina = turtle.Turtle()                  # Create a turtle named tina
+# Draw a 5-sided shape
+for i in range(5):
+    tina.pencolor(colors[i])  # Change color before drawing the side
+    tina.forward(100)         # Move forward
+    tina.left(72)             # Turn left by 72 degrees (360 / 5)
 
-# Use tina.forward() and tina.left() to draw a pentagon
-# Make each side of the pentagon a different color with 
-# tina.pencolor()
-
-... # Your code here
-
-turtle.exitonclick()                    # Close the window when we click on it
+# Keep the drawing window open
+turtle.done()
