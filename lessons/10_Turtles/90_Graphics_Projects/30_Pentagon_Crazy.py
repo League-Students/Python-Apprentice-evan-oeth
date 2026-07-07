@@ -24,13 +24,13 @@ window.setup(width=600, height=600, startx=0, starty=0)
 
 my_turtle = turtle.Turtle()
 my_turtle.shape("turtle")
-my_turtle.speed(0)
+my_turtle.speed('fastest')
 my_turtle.width(1)
 
 sides = 5
 angle = 360 / sides
 
-for i in range(360000000000000000000000000000000000000000000):
+for i in range(36000):
     if i == 100:
         my_turtle.width(2)
     if i == 200:
