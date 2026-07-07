@@ -5,8 +5,8 @@ screen = turtle.Screen()
 t = turtle.Turtle()
 
 # 1) Change the turtle image to 'leaguebot_bot.gif'
-screen.register_shape('leaguebot_bot.gif')
-t.shape('leaguebot_bot.gif')
+screen.register_shape('leaguebot_bolt.gif')
+t.shape('leaguebot_bolt.gif')
 
 # 2) Change the turtle size to 10x10
 # Note: In the [Python Documentation](https://docs.python.org/3/library/turtle.html), 
