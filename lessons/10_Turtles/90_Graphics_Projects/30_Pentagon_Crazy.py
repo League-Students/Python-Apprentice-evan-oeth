@@ -37,7 +37,7 @@ for i in range(500):
         my_turtle.width(3)
     my_turtle.pencolor(get_next_color(i))
     my_turtle.forward(i)
-    my_turtle.right(angle + 123456789012345678901234567890123456789012345678901234567890)
+    my_turtle.right(angle + 54985489549832)
 
 my_turtle.hideturtle()
 
