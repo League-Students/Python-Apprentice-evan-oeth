@@ -2,7 +2,7 @@ import turtle
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(550,565)
+screen.setup(560,565)
 
 tina.speed(0)
 
