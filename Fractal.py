@@ -2,7 +2,7 @@ import turtle
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(600, 600)
+screen.setup(550, 550)
 
 def fractal_triangle(size,depth):
     if depth == 0: # base case, draw a triangle
@@ -16,9 +16,9 @@ def fractal_triangle(size,depth):
             tina.left(120)
 
 tina.pen_up()
-tina.goto(-300,-300)
+tina.goto(-200,-200)
 tina.pendown()
 
-fractal_triangle(200,1)
+fractal_triangle(200,4)
 
 turtle.exitonclick()
