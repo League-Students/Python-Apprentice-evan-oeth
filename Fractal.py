@@ -1,2 +1,3 @@
 import turtle
 
+tina = turtle
