@@ -124,4 +124,16 @@ f main():
             print("Please enter valid integers for row and column.")
         except (KeyboardInterrupt, EOFError):
             print("\nExiting game.")
-            sys.exit()
+            sys.exit() 
+            
+# End game sequence
+    game.revealed = {(r, c) for r in range(size) for c in range(size)} # Reveal everything
+    game.print_board()
+    
+    if game.won:
+        print("Congratulations! You cleared the minefield!")
+    else:
+        print("BOOM! You hit a mine. Game Over.")
+
+if __name__ == "__main__":
+    main()
