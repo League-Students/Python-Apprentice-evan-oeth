@@ -25,4 +25,5 @@ tina.pendown()
 
 fractal_triangle(550,7)
 
+
 turtle.exitonclick()
