@@ -28,7 +28,7 @@ my_turtle.speed('fastest')
 my_turtle.width(1)
 
 sides = 5
-angle = 360 / sides
+angle = 360 / sidesj
 
 for i in range(500):
     if i == 100:
